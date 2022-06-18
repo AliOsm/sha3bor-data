@@ -58,13 +58,13 @@ sha3bor-data -> المجلد الرئيسي للمستودع
 لتثبيت كامل المكتبات المطلوبة لتشغيل الشفرة البرمجية يجب عليك تنفيذ الأمر التالي:
 
 ```bash
-pip install -r requirements.txt
+sha3bor-data:~$ pip install -r requirements.txt
 ```
 
 بعد ذلك يجب تثبيت محركات المتصفحات الخاصة بإطار عمل PlayWright من خلال تنفيذ الأمر التالي:
 
 ```bash
-playwright install
+sha3bor-data:~$ playwright install
 ```
 
 في حال واجهة أي مشاكل خلال تثبيت محركات المتصفحات الخاصة بإطار عمل PlayWright، يمكنك الإستعانة [بالتوثيق الرسمي](https://playwright.dev/python/docs/intro#installation) الخاص بالإطار.
