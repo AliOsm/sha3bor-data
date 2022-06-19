@@ -10,8 +10,6 @@ from era import Era
 class Crawler(ABC):
     @abstractmethod
     def __init__(self, headless: bool, max_retries: int, sleep_time: int) -> None:
-        self.data: List[List[Union[str, int]]] = list()
-
         self.eras: List[Era] = list()
         self.output_file_name = ''
         self.poem_attributes_header: List[str] = list()
@@ -33,7 +31,7 @@ class Crawler(ABC):
             era.process_poems_pages()
 
     def __prepare_data(self) -> None:
-        self.data.append(
+        data: List[Union[str, int]] = [
             [
                 'القصيدة',
                 'العصر',
@@ -44,7 +42,7 @@ class Crawler(ABC):
                 'الصدر',
                 'العجز',
             ]
-        )
+        ]
 
         poem_id = 1
         for era in self.eras:
@@ -52,7 +50,7 @@ class Crawler(ABC):
                 for poem in poet.poems:
                     if len(poem.verses) > 0:
                         for verse in poem.verses:
-                            self.data.append(
+                            data.append(
                                 [
                                     str(poem_id),
                                     era.name,
