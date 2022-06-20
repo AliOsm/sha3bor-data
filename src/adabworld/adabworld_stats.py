@@ -1,6 +1,6 @@
-import pandas as pd
-
 from src.stats import Stats
+
+from src.adabworld.adabworld_processor import AdabWorldProcessor
 
 
 class AdabWorldStats(Stats):
@@ -8,11 +8,7 @@ class AdabWorldStats(Stats):
         super().__init__()
 
         self.input_file_name = 'adabworld.csv'
+        self.processor = AdabWorldProcessor()
 
-    def preprocess_data(self, data: pd.DataFrame) -> pd.DataFrame:
-        data.loc[data['البحر'] == '؟', 'البحر'] = 'غير محدد'
-
-        return data
-
-    def calculate_custom_stats(self, _) -> None:
-        pass
+    def calculate(self) -> None:
+        super().calculate()

@@ -1,8 +1,6 @@
-import pandas as pd
-
 from src.stats import Stats
 
-from src.aldiwan.constants import RHYME_MAPPING
+from src.aldiwan.aldiwan_processor import AldiwanProcessor
 
 
 class AldiwanStats(Stats):
@@ -10,29 +8,23 @@ class AldiwanStats(Stats):
         super().__init__()
 
         self.input_file_name = 'aldiwan.csv'
+        self.processor = AldiwanProcessor()
 
-    def preprocess_data(self, data: pd.DataFrame) -> pd.DataFrame:
-        data.loc[data['النوع'].isna(), 'النوع'] = 'غير محدد'
-        data.loc[data['الموضوع'].isna(), 'الموضوع'] = 'غير محدد'
+    def calculate(self) -> None:
+        super().calculate()
 
-        data.loc[data['القافية'].isna(), 'القافية'] = 'غير محدد'
-        data.loc[data['القافية'] == '(#)', 'القافية'] = 'غير محدد'
-        data.loc[data['القافية'] == '(1)', 'القافية'] = 'غير محدد'
+        print(f"عدد الأنواع: {len(self.data['النوع'].unique()):,}")
+        print(f"عدد الأبيات غير محددة النوع: {len(self.data[self.data['النوع'] == 'غير محدد']):,}")
+        print(f"عدد القصائد غير محددة النوع: {len(self.data[self.data['النوع'] == 'غير محدد'].groupby('القصيدة')):,}")
 
-        for rhyme_mapping in RHYME_MAPPING:
-            data.loc[data['القافية'].isin(rhyme_mapping[0]), 'القافية'] = rhyme_mapping[1]
+        print(f"عدد المواضيع: {len(self.data['الموضوع'].unique()):,}")
+        print(f"عدد الأبيات غير محددة الموضوع: {len(self.data[self.data['الموضوع'] == 'غير محدد']):,}")
+        print(
+            f"عدد القصائد غير محددة الموضوع: {len(self.data[self.data['الموضوع'] == 'غير محدد'].groupby('القصيدة')):,}"
+        )
 
-        return data
-
-    def calculate_custom_stats(self, data: pd.DataFrame) -> None:
-        print(f"عدد الأنواع: {len(data['النوع'].unique()):,}")
-        print(f"عدد الأبيات غير محددة النوع: {len(data[data['النوع'] == 'غير محدد']):,}")
-        print(f"عدد القصائد غير محددة النوع: {len(data[data['النوع'] == 'غير محدد'].groupby('القصيدة')):,}")
-
-        print(f"عدد المواضيع: {len(data['الموضوع'].unique()):,}")
-        print(f"عدد الأبيات غير محددة الموضوع: {len(data[data['الموضوع'] == 'غير محدد']):,}")
-        print(f"عدد القصائد غير محددة الموضوع: {len(data[data['الموضوع'] == 'غير محدد'].groupby('القصيدة')):,}")
-
-        print(f"عدد القوافي: {len(data['القافية'].unique()):,}")
-        print(f"عدد الأبيات غير محددة القافية: {len(data[data['القافية'] == 'غير محدد']):,}")
-        print(f"عدد القصائد غير محددة القافية: {len(data[data['القافية'] == 'غير محدد'].groupby('القصيدة')):,}")
+        print(f"عدد القوافي: {len(self.data['القافية'].unique()):,}")
+        print(f"عدد الأبيات غير محددة القافية: {len(self.data[self.data['القافية'] == 'غير محدد']):,}")
+        print(
+            f"عدد القصائد غير محددة القافية: {len(self.data[self.data['القافية'] == 'غير محدد'].groupby('القصيدة')):,}"
+        )
