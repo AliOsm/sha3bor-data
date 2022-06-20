@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 
 from playwright.sync_api import Page
 
-from utils.pw_utils import process_page_with_retry
+from src.utils.pw_utils import process_page_with_retry
 
 
 class Poem(ABC):

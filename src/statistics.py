@@ -2,10 +2,10 @@ import argparse
 
 from typing import Type
 
-from stats import Stats
+from src.stats import Stats
 
-from adabworld.adabworld_stats import AdabWorldStats
-from aldiwan.aldiwan_stats import AldiwanStats
+from src.adabworld.adabworld_stats import AdabWorldStats
+from src.aldiwan.aldiwan_stats import AldiwanStats
 
 
 def get_website_stats_class(website: str) -> Type[Stats]:

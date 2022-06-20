@@ -1,6 +1,6 @@
 import pandas as pd
 
-from stats import Stats
+from src.stats import Stats
 
 
 class AdabWorldStats(Stats):

@@ -1,9 +1,9 @@
 from typing import Union
 
-from crawler import Crawler
+from src.crawler import Crawler
 
-from dctabudhabi.constants import ERAS
-from dctabudhabi.dctabudhabi_era import DctAbuDhabiEra
+from src.dctabudhabi.constants import ERAS
+from src.dctabudhabi.dctabudhabi_era import DctAbuDhabiEra
 
 
 class DctAbuDhabiCrawler(Crawler):

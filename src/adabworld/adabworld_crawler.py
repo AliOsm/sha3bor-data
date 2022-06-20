@@ -1,9 +1,9 @@
 from typing import Union
 
-from crawler import Crawler
+from src.crawler import Crawler
 
-from adabworld.constants import ERAS
-from adabworld.adabworld_era import AdabWorldEra
+from src.adabworld.constants import ERAS
+from src.adabworld.adabworld_era import AdabWorldEra
 
 
 class AdabworldCrawler(Crawler):

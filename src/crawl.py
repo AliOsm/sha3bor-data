@@ -2,11 +2,11 @@ import argparse
 
 from typing import Type
 
-from crawler import Crawler
+from src.crawler import Crawler
 
-from adabworld.adabworld_crawler import AdabworldCrawler
-from aldiwan.aldiwan_crawler import AldiwanCrawler
-from dctabudhabi.dctabudhabi_crawler import DctAbuDhabiCrawler
+from src.adabworld.adabworld_crawler import AdabworldCrawler
+from src.aldiwan.aldiwan_crawler import AldiwanCrawler
+from src.dctabudhabi.dctabudhabi_crawler import DctAbuDhabiCrawler
 
 
 def get_website_crawler_class(website: str) -> Type[Crawler]:

@@ -1,8 +1,8 @@
 import pandas as pd
 
-from stats import Stats
+from src.stats import Stats
 
-from aldiwan.constants import RHYME_MAPPING
+from src.aldiwan.constants import RHYME_MAPPING
 
 
 class AldiwanStats(Stats):

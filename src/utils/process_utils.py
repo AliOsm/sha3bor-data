@@ -4,7 +4,7 @@ from typing import Tuple
 
 from pyarabic.araby import LETTERS, TASHKEEL, strip_tatweel
 
-from constants import POSSIBLE_DIACRITIZATION
+from src.constants import POSSIBLE_DIACRITIZATION
 
 
 def process_part(part: str) -> str:

@@ -2,10 +2,10 @@ from typing import List, Union
 
 from playwright.sync_api import ElementHandle, Page
 
-from poet import Poet
+from src.poet import Poet
 
-from aldiwan.constants import ALDIWAN_ROOT
-from aldiwan.aldiwan_poem import AldiwanPoem
+from src.aldiwan.constants import ALDIWAN_ROOT
+from src.aldiwan.aldiwan_poem import AldiwanPoem
 
 
 class AldiwanPoet(Poet):

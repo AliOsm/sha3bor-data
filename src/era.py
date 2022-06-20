@@ -4,8 +4,8 @@ from abc import ABC, abstractmethod
 from tqdm import tqdm
 from playwright.sync_api import Page
 
-from poet import Poet
-from utils.pw_utils import process_page_with_retry
+from src.poet import Poet
+from src.utils.pw_utils import process_page_with_retry
 
 
 class Era(ABC):

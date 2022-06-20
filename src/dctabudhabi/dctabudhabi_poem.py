@@ -2,9 +2,8 @@ from typing import List, Union
 
 from playwright.sync_api import ElementHandle, Page
 
-from utils.process_utils import process_part
-
-from poem import Poem
+from src.poem import Poem
+from src.utils.process_utils import process_part
 
 
 class DctAbuDhabiPoem(Poem):

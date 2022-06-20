@@ -2,10 +2,10 @@ from typing import List, Tuple, Union
 
 from playwright.sync_api import ElementHandle, Page
 
-from poet import Poet
+from src.poet import Poet
 
-from dctabudhabi.constants import DCTABUDHABI_ROOT
-from dctabudhabi.dctabudhabi_poem import DctAbuDhabiPoem
+from src.dctabudhabi.constants import DCTABUDHABI_ROOT
+from src.dctabudhabi.dctabudhabi_poem import DctAbuDhabiPoem
 
 
 class DctAbuDhabiPoet(Poet):

@@ -2,8 +2,8 @@ from typing import List, Union
 
 from playwright.sync_api import ElementHandle, Page
 
-from poem import Poem
-from utils.process_utils import process_part
+from src.poem import Poem
+from src.utils.process_utils import process_part
 
 
 class AdabWorldPoem(Poem):

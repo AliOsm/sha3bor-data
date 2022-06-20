@@ -2,10 +2,10 @@ from typing import List, Union
 
 from playwright.sync_api import ElementHandle, Page
 
-from era import Era
+from src.era import Era
 
-from adabworld.constants import ADABWORLD_ROOT
-from adabworld.adabworld_poet import AdabWorldPoet
+from src.adabworld.constants import ADABWORLD_ROOT
+from src.adabworld.adabworld_poet import AdabWorldPoet
 
 
 class AdabWorldEra(Era):

@@ -1,9 +1,9 @@
 from typing import Union
 
-from crawler import Crawler
+from src.crawler import Crawler
 
-from aldiwan.constants import ERAS
-from aldiwan.aldiwan_era import AldiwanEra
+from src.aldiwan.constants import ERAS
+from src.aldiwan.aldiwan_era import AldiwanEra
 
 
 class AldiwanCrawler(Crawler):

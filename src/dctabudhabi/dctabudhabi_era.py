@@ -3,10 +3,10 @@ from typing import List, Union
 from pyarabic.araby import strip_tashkeel
 from playwright.sync_api import ElementHandle, Page
 
-from era import Era
+from src.era import Era
 
-from dctabudhabi.constants import DCTABUDHABI_ROOT
-from dctabudhabi.dctabudhabi_poet import DctAbuDhabiPoet
+from src.dctabudhabi.constants import DCTABUDHABI_ROOT
+from src.dctabudhabi.dctabudhabi_poet import DctAbuDhabiPoet
 
 
 class DctAbuDhabiEra(Era):

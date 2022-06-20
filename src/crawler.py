@@ -4,7 +4,7 @@ import csv
 from typing import List, Union
 from abc import ABC, abstractmethod
 
-from era import Era
+from src.era import Era
 
 
 class Crawler(ABC):

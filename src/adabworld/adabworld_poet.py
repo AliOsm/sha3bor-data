@@ -2,10 +2,10 @@ from typing import List, Union
 
 from playwright.sync_api import ElementHandle, Page
 
-from poet import Poet
-from utils.pw_utils import scroll_to_page_end
+from src.poet import Poet
+from src.utils.pw_utils import scroll_to_page_end
 
-from adabworld.adabworld_poem import AdabWorldPoem
+from src.adabworld.adabworld_poem import AdabWorldPoem
 
 
 class AdabWorldPoet(Poet):

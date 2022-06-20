@@ -3,7 +3,7 @@ import pandas as pd
 
 from abc import ABC, abstractmethod
 
-from utils.process_utils import diacritization_stats
+from src.utils.process_utils import diacritization_stats
 
 
 class Stats(ABC):

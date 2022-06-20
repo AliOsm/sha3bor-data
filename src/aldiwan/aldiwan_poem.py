@@ -5,8 +5,8 @@ from typing import List, Union
 from bs4 import BeautifulSoup
 from playwright.sync_api import ElementHandle, Page
 
-from poem import Poem
-from utils.process_utils import process_part
+from src.poem import Poem
+from src.utils.process_utils import process_part
 
 
 class AldiwanPoem(Poem):
