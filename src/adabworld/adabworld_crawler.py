@@ -20,6 +20,6 @@ class AdabworldCrawler(Crawler):
             )
             for name, url in ERAS
         ]
-        self.output_file_name = 'adabworld.csv'
+        self.output_file_name = 'adabworld.tsv'
         self.poem_attributes_header = ['مشطورة', 'البحر']
         self.poem_attributes = ['mashtoora', 'meter']

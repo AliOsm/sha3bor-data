@@ -20,6 +20,6 @@ class DctAbuDhabiCrawler(Crawler):
             )
             for name, url in ERAS
         ]
-        self.output_file_name = 'dctabudhabi.csv'
+        self.output_file_name = 'dctabudhabi.tsv'
         self.poem_attributes_header = ['الديوان', 'مشطورة', 'الوصف', 'البحر', 'القافية']
         self.poem_attributes = ['diwan', 'mashtoora', 'description', 'meter', 'rhyme']

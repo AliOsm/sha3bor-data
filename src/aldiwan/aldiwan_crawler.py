@@ -20,6 +20,6 @@ class AldiwanCrawler(Crawler):
             )
             for name, url in ERAS
         ]
-        self.output_file_name = 'aldiwan.csv'
+        self.output_file_name = 'aldiwan.tsv'
         self.poem_attributes_header = ['النوع', 'مشطورة', 'الموضوع', 'البحر', 'القافية']
         self.poem_attributes = ['type', 'mashtoora', 'category', 'meter', 'rhyme']
