@@ -15,7 +15,7 @@ class DctAbuDhabiPoem(Poem):
         self.rhyme = ''
 
     def extract_poem_info(self, page: Page) -> None:
-        page.wait_for_selector('.poem-verses')
+        page.wait_for_selector('.poem-verses', timeout=1500)
 
         self.__extract_description(page)
         self.__process_search_keys(page)
