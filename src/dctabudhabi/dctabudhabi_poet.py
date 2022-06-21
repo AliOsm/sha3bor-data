@@ -47,16 +47,19 @@ class DctAbuDhabiPoet(Poet):
         except Exception:
             pass
 
-        page.wait_for_selector('.base-card__title')
+        try:
+            page.wait_for_selector('.base-card__title', timeout=1500)
 
-        list(
-            map(
-                lambda poem_element: self.__process_poem_element(poem_element, rhyme),
-                self.__get_poems_elements(page, rhyme),
-            ),
-        )
+            list(
+                map(
+                    lambda poem_element: self.__process_poem_element(poem_element, rhyme),
+                    self.__get_poems_elements(page, rhyme),
+                ),
+            )
 
-        page.wait_for_timeout(self.sleep_time)
+            page.wait_for_timeout(self.sleep_time)
+        except Exception:
+            print(f'تم العثور على قافية لا تمتلك أي قصائد للشاعر {self.name}: {rhyme}.')
 
     def __get_poems_elements(self, page: Page, rhyme: str) -> List[ElementHandle]:
         poems_elements = page.query_selector_all('.base-card__title')
